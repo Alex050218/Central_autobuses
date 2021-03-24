@@ -71,6 +71,7 @@ namespace Central_autobuses
             this.BtnPasajeros.TabIndex = 1;
             this.BtnPasajeros.Text = "Ver pasajeros";
             this.BtnPasajeros.UseVisualStyleBackColor = true;
+            this.BtnPasajeros.Click += new System.EventHandler(this.MostrarForm);
             // 
             // PanelMenus
             // 
