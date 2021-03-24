@@ -22,6 +22,21 @@ namespace Central_autobuses
             }
         }
 
+        private string ArchivoPasajeros
+        {
+            get
+            {
+                string DirUsuarios = Path.Combine(FolderDatos, "Pasajeros.txt");
+
+                if (!File.Exists(DirUsuarios))
+                {
+                    File.Create(DirUsuarios);
+                }
+
+                return DirUsuarios;
+            }
+        }
+
         public PaginaPrincipal()
         {
             InitializeComponent();
@@ -35,7 +50,7 @@ namespace Central_autobuses
             PanelMenus.Controls.Clear();
             if(NombreBoton == "BtnComprarBoleto")
             {
-                ComprarBoleto PantallaBoleto = new ComprarBoleto
+                ComprarBoleto PantallaBoleto = new ComprarBoleto(ArchivoPasajeros)
                 {
                     TopLevel = false,
                     AutoScroll = false
