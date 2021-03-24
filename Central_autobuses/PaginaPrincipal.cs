@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Central_autobuses
 {
-    public partial class Form1 : Form
+    public partial class PaginaPrincipal : Form
     {
-        public Form1()
+        public PaginaPrincipal()
         {
             InitializeComponent();
         }
