@@ -24,6 +24,7 @@ namespace Central_autobuses
                     AutoScroll = false
                 };
 
+                Text = "Central | Comprar boleto";
                 PanelMenus.Controls.Add(PantallaBoleto);
                 PantallaBoleto.Show();
             }
