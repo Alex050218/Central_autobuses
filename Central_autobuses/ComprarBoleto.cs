@@ -12,9 +12,13 @@ namespace Central_autobuses
 {
     public partial class ComprarBoleto : Form
     {
-        public ComprarBoleto()
+        private string DirUsarios = null;
+
+        public ComprarBoleto(string DirRegistrosPasajero)
         {
             InitializeComponent();
+
+            DirUsarios = DirRegistrosPasajero;
         }
     }
 }
