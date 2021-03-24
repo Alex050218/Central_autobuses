@@ -129,6 +129,11 @@ namespace Central_autobuses
             // CajaTipoID
             // 
             this.CajaTipoID.FormattingEnabled = true;
+            this.CajaTipoID.Items.AddRange(new object[] {
+            "INE",
+            "Cedula Profesional",
+            "Credencial de estudiante",
+            "Credencial del Instituto Nacional de las Personas Adultas Mayores"});
             this.CajaTipoID.Location = new System.Drawing.Point(69, 60);
             this.CajaTipoID.Name = "CajaTipoID";
             this.CajaTipoID.Size = new System.Drawing.Size(191, 21);
