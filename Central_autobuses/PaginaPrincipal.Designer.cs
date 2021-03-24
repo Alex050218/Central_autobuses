@@ -50,6 +50,7 @@ namespace Central_autobuses
             this.BtnComprarBoleto.TabIndex = 0;
             this.BtnComprarBoleto.Text = "Comprar boleto";
             this.BtnComprarBoleto.UseVisualStyleBackColor = true;
+            this.BtnComprarBoleto.Click += new System.EventHandler(this.MostrarForm);
             // 
             // panel1
             // 
