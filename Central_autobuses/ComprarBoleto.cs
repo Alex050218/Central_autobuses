@@ -19,6 +19,9 @@ namespace Central_autobuses
             InitializeComponent();
 
             DirUsarios = DirRegistrosPasajero;
+
+            CajaDestinoBoleto.DropDownStyle = ComboBoxStyle.DropDownList;
+            CajaTipoID.DropDownStyle = ComboBoxStyle.DropDownList;
         }
     }
 }
