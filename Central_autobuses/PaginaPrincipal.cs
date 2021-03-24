@@ -1,10 +1,27 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Central_autobuses
 {
+
     public partial class PaginaPrincipal : Form
     {
+        private string FolderDatos
+        {
+            get
+            {
+                string Folder = @"C:\DatosCentral";
+
+                if (!Directory.Exists(Folder))
+                {
+                    Directory.CreateDirectory(Folder);
+                }
+
+                return Folder;
+            }
+        }
+
         public PaginaPrincipal()
         {
             InitializeComponent();
