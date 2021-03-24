@@ -34,17 +34,17 @@ namespace Central_autobuses
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TxtNombreCompleto = new System.Windows.Forms.TextBox();
             this.TxtEdad = new System.Windows.Forms.TextBox();
+            this.TxtNombreCompleto = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TxtNumeroID = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.CajaDestinoBoleto = new System.Windows.Forms.ComboBox();
-            this.TxtCantidadBoletos = new System.Windows.Forms.TextBox();
-            this.BtnRegistrar = new System.Windows.Forms.Button();
             this.CajaTipoID = new System.Windows.Forms.ComboBox();
+            this.TxtNumeroID = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.TxtCantidadBoletos = new System.Windows.Forms.TextBox();
+            this.CajaDestinoBoleto = new System.Windows.Forms.ComboBox();
+            this.BtnRegistrar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -99,19 +99,19 @@ namespace Central_autobuses
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del usuario";
             // 
-            // TxtNombreCompleto
-            // 
-            this.TxtNombreCompleto.Location = new System.Drawing.Point(118, 29);
-            this.TxtNombreCompleto.Name = "TxtNombreCompleto";
-            this.TxtNombreCompleto.Size = new System.Drawing.Size(199, 20);
-            this.TxtNombreCompleto.TabIndex = 3;
-            // 
             // TxtEdad
             // 
             this.TxtEdad.Location = new System.Drawing.Point(118, 65);
             this.TxtEdad.Name = "TxtEdad";
             this.TxtEdad.Size = new System.Drawing.Size(199, 20);
             this.TxtEdad.TabIndex = 4;
+            // 
+            // TxtNombreCompleto
+            // 
+            this.TxtNombreCompleto.Location = new System.Drawing.Point(118, 29);
+            this.TxtNombreCompleto.Name = "TxtNombreCompleto";
+            this.TxtNombreCompleto.Size = new System.Drawing.Size(199, 20);
+            this.TxtNombreCompleto.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -126,14 +126,20 @@ namespace Central_autobuses
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Identificacion";
             // 
-            // label5
+            // CajaTipoID
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Numero";
+            this.CajaTipoID.FormattingEnabled = true;
+            this.CajaTipoID.Location = new System.Drawing.Point(69, 60);
+            this.CajaTipoID.Name = "CajaTipoID";
+            this.CajaTipoID.Size = new System.Drawing.Size(191, 21);
+            this.CajaTipoID.TabIndex = 5;
+            // 
+            // TxtNumeroID
+            // 
+            this.TxtNumeroID.Location = new System.Drawing.Point(69, 29);
+            this.TxtNumeroID.Name = "TxtNumeroID";
+            this.TxtNumeroID.Size = new System.Drawing.Size(191, 20);
+            this.TxtNumeroID.TabIndex = 2;
             // 
             // label6
             // 
@@ -144,12 +150,14 @@ namespace Central_autobuses
             this.label6.TabIndex = 1;
             this.label6.Text = "Tipo";
             // 
-            // TxtNumeroID
+            // label5
             // 
-            this.TxtNumeroID.Location = new System.Drawing.Point(69, 29);
-            this.TxtNumeroID.Name = "TxtNumeroID";
-            this.TxtNumeroID.Size = new System.Drawing.Size(191, 20);
-            this.TxtNumeroID.TabIndex = 2;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Numero";
             // 
             // groupBox3
             // 
@@ -164,20 +172,24 @@ namespace Central_autobuses
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Boleto";
             // 
-            // CajaDestinoBoleto
-            // 
-            this.CajaDestinoBoleto.FormattingEnabled = true;
-            this.CajaDestinoBoleto.Location = new System.Drawing.Point(118, 24);
-            this.CajaDestinoBoleto.Name = "CajaDestinoBoleto";
-            this.CajaDestinoBoleto.Size = new System.Drawing.Size(199, 21);
-            this.CajaDestinoBoleto.TabIndex = 4;
-            // 
             // TxtCantidadBoletos
             // 
             this.TxtCantidadBoletos.Location = new System.Drawing.Point(118, 54);
             this.TxtCantidadBoletos.Name = "TxtCantidadBoletos";
             this.TxtCantidadBoletos.Size = new System.Drawing.Size(199, 20);
             this.TxtCantidadBoletos.TabIndex = 5;
+            // 
+            // CajaDestinoBoleto
+            // 
+            this.CajaDestinoBoleto.FormattingEnabled = true;
+            this.CajaDestinoBoleto.Items.AddRange(new object[] {
+            "Mazatlan",
+            "San Luis Potosi",
+            "Ciudad de Mexico"});
+            this.CajaDestinoBoleto.Location = new System.Drawing.Point(118, 24);
+            this.CajaDestinoBoleto.Name = "CajaDestinoBoleto";
+            this.CajaDestinoBoleto.Size = new System.Drawing.Size(199, 21);
+            this.CajaDestinoBoleto.TabIndex = 4;
             // 
             // BtnRegistrar
             // 
@@ -187,14 +199,6 @@ namespace Central_autobuses
             this.BtnRegistrar.TabIndex = 7;
             this.BtnRegistrar.Text = "Comprar boleto";
             this.BtnRegistrar.UseVisualStyleBackColor = true;
-            // 
-            // CajaTipoID
-            // 
-            this.CajaTipoID.FormattingEnabled = true;
-            this.CajaTipoID.Location = new System.Drawing.Point(69, 60);
-            this.CajaTipoID.Name = "CajaTipoID";
-            this.CajaTipoID.Size = new System.Drawing.Size(191, 21);
-            this.CajaTipoID.TabIndex = 5;
             // 
             // ComprarBoleto
             // 
