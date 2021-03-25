@@ -54,5 +54,23 @@ namespace Central_autobuses
             }
             ActivarBoton();
         }
+
+        public void AgregarDatosCajas(object sender, EventArgs e)
+        {
+            ComboBox CajaActual = (ComboBox)sender;
+
+            Regex NombreCaja = new Regex(@"(?<=Caja)(.*)(?=(ID)|(Boleto))");
+            string Dato = NombreCaja.Match(CajaActual.Name).Groups[0].ToString();
+
+            if(Dato == "Destino")
+            {
+                DatosUsuario["Destino"] = CajaActual.Text;
+            }
+            else
+            {
+                DatosUsuario["ID_Tipo"] = CajaActual.Text;
+            }
+            ActivarBoton();
+        }
     }
 }

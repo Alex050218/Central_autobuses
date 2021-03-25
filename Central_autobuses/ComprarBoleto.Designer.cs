@@ -139,6 +139,7 @@ namespace Central_autobuses
             this.CajaTipoID.Name = "CajaTipoID";
             this.CajaTipoID.Size = new System.Drawing.Size(191, 21);
             this.CajaTipoID.TabIndex = 5;
+            this.CajaTipoID.SelectedIndexChanged += new System.EventHandler(this.AgregarDatosCajas);
             // 
             // TxtNumeroID
             // 
@@ -196,6 +197,7 @@ namespace Central_autobuses
             this.CajaDestinoBoleto.Name = "CajaDestinoBoleto";
             this.CajaDestinoBoleto.Size = new System.Drawing.Size(199, 21);
             this.CajaDestinoBoleto.TabIndex = 4;
+            this.CajaDestinoBoleto.SelectedIndexChanged += new System.EventHandler(this.AgregarDatosCajas);
             // 
             // BtnRegistrar
             // 
