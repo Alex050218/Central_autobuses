@@ -8,7 +8,7 @@ namespace Central_autobuses
 {
     public partial class ComprarBoleto : Form
     {
-        private string DirUsarios = null;
+        private string DirUsarios;
         private Dictionary<string, string> DatosUsuario = new Dictionary<string, string>()
         {
             { "Nombre", null },
@@ -59,11 +59,11 @@ namespace Central_autobuses
 
             if(Dato == "Destino")
             {
-                DatosUsuario["Destino"] = CajaActual.Text;
+                DatosUsuario["Destino"] = (string)CajaActual.SelectedItem;
             }
             else
             {
-                DatosUsuario["ID_Tipo"] = null;
+                DatosUsuario["ID_Tipo"] = (string)CajaActual.SelectedItem;
             }
             ActivarBoton();
         }
