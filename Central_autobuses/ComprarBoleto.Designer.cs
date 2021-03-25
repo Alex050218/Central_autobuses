@@ -112,6 +112,7 @@ namespace Central_autobuses
             this.TxtNombreCompleto.Name = "TxtNombreCompleto";
             this.TxtNombreCompleto.Size = new System.Drawing.Size(199, 20);
             this.TxtNombreCompleto.TabIndex = 3;
+            this.TxtNombreCompleto.TextChanged += new System.EventHandler(this.ValidarNombre);
             // 
             // groupBox2
             // 
@@ -198,6 +199,7 @@ namespace Central_autobuses
             // 
             // BtnRegistrar
             // 
+            this.BtnRegistrar.Enabled = false;
             this.BtnRegistrar.Location = new System.Drawing.Point(496, 189);
             this.BtnRegistrar.Name = "BtnRegistrar";
             this.BtnRegistrar.Size = new System.Drawing.Size(191, 50);
