@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -8,8 +9,8 @@ namespace Central_autobuses
 {
     public partial class ComprarBoleto : Form
     {
-        private string DirUsarios;
-        private Dictionary<string, string> DatosUsuario = new Dictionary<string, string>()
+        private readonly string DirUsarios;
+        private readonly Dictionary<string, string> DatosUsuario = new Dictionary<string, string>()
         {
             { "Nombre", null },
             { "Edad", null },
@@ -27,6 +28,15 @@ namespace Central_autobuses
 
             CajaDestinoBoleto.DropDownStyle = ComboBoxStyle.DropDownList;
             CajaTipoID.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        public void GuardarArchivo(object sender, EventArgs e)
+        {
+            string NuevaFila = string.Join("," , DatosUsuario.Values);
+            using (StreamWriter ArchivoPasajeros = new StreamWriter(DirUsarios, true))
+            {
+                ArchivoPasajeros.Write(NuevaFila);
+            }
         }
 
         public void ActivarBoton()

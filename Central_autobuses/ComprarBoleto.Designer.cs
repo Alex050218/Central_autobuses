@@ -211,6 +211,7 @@ namespace Central_autobuses
             this.BtnRegistrar.TabIndex = 7;
             this.BtnRegistrar.Text = "Comprar boleto";
             this.BtnRegistrar.UseVisualStyleBackColor = true;
+            this.BtnRegistrar.Click += new System.EventHandler(this.GuardarArchivo);
             // 
             // ComprarBoleto
             // 
