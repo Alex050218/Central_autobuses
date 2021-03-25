@@ -30,7 +30,8 @@ namespace Central_autobuses
 
                 if (!File.Exists(DirUsuarios))
                 {
-                    File.Create(DirUsuarios);
+                    FileStream archivo = File.Create(DirUsuarios);
+                    archivo.Close();
                 }
 
                 return DirUsuarios;

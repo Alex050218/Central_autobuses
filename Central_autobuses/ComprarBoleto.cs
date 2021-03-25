@@ -31,16 +31,14 @@ namespace Central_autobuses
 
                 if (!File.Exists(DirAsientos))
                 {
-                    File.Create(DirAsientos);
                     return 40;
                 }
 
-                int Cantidad = 0;
-                using (StreamReader AsientosDestinacion = new StreamReader(DirAsientos))
-                {
-                    string CantidadStr = AsientosDestinacion.ReadLine();
-                    Cantidad = Convert.ToInt32(CantidadStr);
-                }
+                StreamReader AsientosDestinacion = new StreamReader(DirAsientos);
+
+                string CantidadStr = AsientosDestinacion.ReadLine();
+                int Cantidad = Convert.ToInt32(CantidadStr);
+                AsientosDestinacion.Close();
 
                 return Cantidad;
             }
@@ -57,10 +55,9 @@ namespace Central_autobuses
                     File.Delete(DirAsientos);
                 }
 
-                using(StreamWriter NuevoAsiento = new StreamWriter(DirAsientos, true))
-                {
-                    NuevoAsiento.Write(value.ToString());
-                }
+                StreamWriter NuevoAsiento = new StreamWriter(DirAsientos, true);
+                NuevoAsiento.Write(value.ToString());
+                NuevoAsiento.Close();
             }
         }
 
@@ -76,11 +73,23 @@ namespace Central_autobuses
 
         public void GuardarArchivo(object sender, EventArgs e)
         {
-            string NuevaFila = string.Join("," , DatosUsuario.Values);
-            using (StreamWriter ArchivoPasajeros = new StreamWriter(DirUsarios, true))
+            int Asientos_disponibles = NumAsientos;
+            int Asientos_seleccionadods = Convert.ToInt32(DatosUsuario["Cantidad"]);
+
+            if (Asientos_seleccionadods > Asientos_disponibles)
             {
-                ArchivoPasajeros.Write(NuevaFila);
+                MessageBox.Show($"La cantidad de asientos debe ser menos o igual a {Asientos_disponibles}", "Asientos llenos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            string NuevaFila = string.Join("," , DatosUsuario.Values);
+
+            StreamWriter ArchivoPasajeros = new StreamWriter(DirUsarios, true);
+            ArchivoPasajeros.Write(NuevaFila);
+            ArchivoPasajeros.Close();
+
+            int nuevos_asientos = Asientos_disponibles - Asientos_seleccionadods;
+            NumAsientos = nuevos_asientos;
         }
 
         public void ActivarBoton()
