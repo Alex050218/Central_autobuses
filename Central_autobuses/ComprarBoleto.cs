@@ -20,6 +20,50 @@ namespace Central_autobuses
             { "Cantidad", null }
         };
 
+        private int NumAsientos
+        {
+            get
+            {
+                string Folder = Path.GetDirectoryName(DirUsarios);
+
+                string Destino = DatosUsuario["Destino"];
+                string DirAsientos = Path.Combine(Folder, $"Asientos_{Destino}.txt");
+
+                if (!File.Exists(DirAsientos))
+                {
+                    File.Create(DirAsientos);
+                    return 40;
+                }
+
+                int Cantidad = 0;
+                using (StreamReader AsientosDestinacion = new StreamReader(DirAsientos))
+                {
+                    string CantidadStr = AsientosDestinacion.ReadLine();
+                    Cantidad = Convert.ToInt32(CantidadStr);
+                }
+
+                return Cantidad;
+            }
+
+            set
+            {
+                string Folder = Path.GetDirectoryName(DirUsarios);
+
+                string Destino = DatosUsuario["Destino"];
+                string DirAsientos = Path.Combine(Folder, $"Asientos_{Destino}.txt");
+
+                if (File.Exists(DirAsientos))
+                {
+                    File.Delete(DirAsientos);
+                }
+
+                using(StreamWriter NuevoAsiento = new StreamWriter(DirAsientos, true))
+                {
+                    NuevoAsiento.Write(value.ToString());
+                }
+            }
+        }
+
         public ComprarBoleto(string DirRegistrosPasajero)
         {
             InitializeComponent();
