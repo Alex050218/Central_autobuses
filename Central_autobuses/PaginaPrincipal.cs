@@ -69,6 +69,7 @@ namespace Central_autobuses
                     AutoScroll = false
                 };
 
+                Text = "Central | Asientos disponibles";
                 PanelMenus.Controls.Add(PantallaPasajeros);
                 PantallaPasajeros.Show();
             }
