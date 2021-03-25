@@ -105,6 +105,7 @@ namespace Central_autobuses
             this.TxtEdad.Name = "TxtEdad";
             this.TxtEdad.Size = new System.Drawing.Size(199, 20);
             this.TxtEdad.TabIndex = 4;
+            this.TxtEdad.TextChanged += new System.EventHandler(this.ValidarNumeros);
             // 
             // TxtNombreCompleto
             // 
@@ -147,6 +148,7 @@ namespace Central_autobuses
             this.TxtNumeroID.Name = "TxtNumeroID";
             this.TxtNumeroID.Size = new System.Drawing.Size(191, 20);
             this.TxtNumeroID.TabIndex = 2;
+            this.TxtNumeroID.TextChanged += new System.EventHandler(this.ValidarNumeros);
             // 
             // label6
             // 
@@ -185,6 +187,7 @@ namespace Central_autobuses
             this.TxtCantidadBoletos.Name = "TxtCantidadBoletos";
             this.TxtCantidadBoletos.Size = new System.Drawing.Size(199, 20);
             this.TxtCantidadBoletos.TabIndex = 5;
+            this.TxtCantidadBoletos.TextChanged += new System.EventHandler(this.ValidarNumeros);
             // 
             // CajaDestinoBoleto
             // 

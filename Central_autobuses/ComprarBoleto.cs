@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Central_autobuses
@@ -44,7 +39,7 @@ namespace Central_autobuses
             TextBox CajaNombre = (TextBox)sender;
             string TextoIntrucido = CajaNombre.Text;
 
-            if (Regex.IsMatch(TextoIntrucido, @"(([A-Z][a-z]{2,})\s?){2,}"))
+            if (Regex.IsMatch(TextoIntrucido, @"^(([A-Z][a-z]{2,})\s?){2,}$"))
             {
                 DatosUsuario["Nombre"] = TextoIntrucido;
             }
@@ -68,7 +63,41 @@ namespace Central_autobuses
             }
             else
             {
-                DatosUsuario["ID_Tipo"] = CajaActual.Text;
+                DatosUsuario["ID_Tipo"] = null;
+            }
+            ActivarBoton();
+        }
+
+        public void ValidarNumeros(object sender, EventArgs e)
+        {
+            TextBox CajaNumeros = (TextBox)sender;
+            string NumeroIntroducido = CajaNumeros.Text;
+
+            string Dato = CajaNumeros.Name;
+            string LlaveNueva = null;
+
+            switch (Dato)
+            {
+                case "TxtEdad":
+                    LlaveNueva = "Edad";
+                    break;
+
+                case "TxtNumeroID":
+                    LlaveNueva = "ID_Numero";
+                    break;
+
+                case "TxtCantidadBoletos":
+                    LlaveNueva = "Cantidad";
+                    break;
+            }
+
+            if (Regex.IsMatch(NumeroIntroducido, @"^\d{1,10}$"))
+            {
+                DatosUsuario[LlaveNueva] = NumeroIntroducido;
+            }
+            else
+            {
+                DatosUsuario[LlaveNueva] = null;
             }
             ActivarBoton();
         }
