@@ -40,54 +40,60 @@ namespace Central_autobuses
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(166, 54);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(273, 119);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(100, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mazatlan";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(166, 105);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(211, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.Size = new System.Drawing.Size(162, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "San Luis Potosi";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(166, 151);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(188, 216);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 13);
+            this.label3.Size = new System.Drawing.Size(185, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ciudad de Mexico";
             // 
             // lblMaza
             // 
             this.lblMaza.AutoSize = true;
-            this.lblMaza.Location = new System.Drawing.Point(356, 54);
+            this.lblMaza.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaza.Location = new System.Drawing.Point(401, 119);
             this.lblMaza.Name = "lblMaza";
-            this.lblMaza.Size = new System.Drawing.Size(19, 13);
+            this.lblMaza.Size = new System.Drawing.Size(36, 25);
             this.lblMaza.TabIndex = 3;
             this.lblMaza.Text = "40";
             // 
             // lblLuis
             // 
             this.lblLuis.AutoSize = true;
-            this.lblLuis.Location = new System.Drawing.Point(356, 105);
+            this.lblLuis.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLuis.Location = new System.Drawing.Point(401, 170);
             this.lblLuis.Name = "lblLuis";
-            this.lblLuis.Size = new System.Drawing.Size(19, 13);
+            this.lblLuis.Size = new System.Drawing.Size(36, 25);
             this.lblLuis.TabIndex = 4;
             this.lblLuis.Text = "40";
             // 
             // lblCiudad
             // 
             this.lblCiudad.AutoSize = true;
-            this.lblCiudad.Location = new System.Drawing.Point(356, 151);
+            this.lblCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCiudad.Location = new System.Drawing.Point(401, 216);
             this.lblCiudad.Name = "lblCiudad";
-            this.lblCiudad.Size = new System.Drawing.Size(19, 13);
+            this.lblCiudad.Size = new System.Drawing.Size(36, 25);
             this.lblCiudad.TabIndex = 5;
             this.lblCiudad.Text = "40";
             // 
