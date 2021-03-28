@@ -69,27 +69,27 @@ namespace Central_autobuses
             this.lblMaza.AutoSize = true;
             this.lblMaza.Location = new System.Drawing.Point(356, 54);
             this.lblMaza.Name = "lblMaza";
-            this.lblMaza.Size = new System.Drawing.Size(35, 13);
+            this.lblMaza.Size = new System.Drawing.Size(19, 13);
             this.lblMaza.TabIndex = 3;
-            this.lblMaza.Text = "label4";
+            this.lblMaza.Text = "40";
             // 
             // lblLuis
             // 
             this.lblLuis.AutoSize = true;
             this.lblLuis.Location = new System.Drawing.Point(356, 105);
             this.lblLuis.Name = "lblLuis";
-            this.lblLuis.Size = new System.Drawing.Size(35, 13);
+            this.lblLuis.Size = new System.Drawing.Size(19, 13);
             this.lblLuis.TabIndex = 4;
-            this.lblLuis.Text = "label4";
+            this.lblLuis.Text = "40";
             // 
             // lblCiudad
             // 
             this.lblCiudad.AutoSize = true;
             this.lblCiudad.Location = new System.Drawing.Point(356, 151);
             this.lblCiudad.Name = "lblCiudad";
-            this.lblCiudad.Size = new System.Drawing.Size(35, 13);
+            this.lblCiudad.Size = new System.Drawing.Size(19, 13);
             this.lblCiudad.TabIndex = 5;
-            this.lblCiudad.Text = "label4";
+            this.lblCiudad.Text = "40";
             // 
             // Pasajeros
             // 
